@@ -1,0 +1,71 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SimpleDictaphone.AboutAppPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+
+
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="SIMPLEDICTAPHONE" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="о приложении" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="105,58,0,0" Width="351" FontSize="26.667" Opacity="0.5" FontFamily="Segoe WP SemiLight" Text="Версия: 1.2.0.0"/>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,269,0,0" FontSize="32" FontFamily="Segoe WP" Width="436" Foreground="{StaticResource PhoneAccentBrush}" Text="Тгк: @SimpSoft"/>
+            <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,100,0,0" FontSize="24" FontFamily="Segoe WP" Width="436" Text="Пакет SGU: 1 (Pink)" Foreground="#FFF472D0"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="Assets/Images/logo-simpledictaphone.png" Stretch="UniformToFill" Margin="10,10,0,0"/>
+            <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="SimpleDictaphone" VerticalAlignment="Top" Margin="105,10,0,0" Width="351" FontSize="32"/>
+            <Image x:Name="image1" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="80" Margin="10,217,0,0" Source="/Assets/Images/logo-simplesoftware.png"/>
+            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,317,0,0" TextWrapping="Wrap" Text="Если вы найдете баги/недочеты, можете сообщить мне в Телеграме (@morat_krutoi)" VerticalAlignment="Top" FontSize="21.333" FontFamily="Segoe WP SemiLight" TextDecorations="Underline"/>
+            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,570,0,0" TextWrapping="Wrap" Text="Rus pub." VerticalAlignment="Top" FontFamily="Portable User Interface">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="White" Opacity="0.3"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Button x:Name="Button" Click="Button_Click" Content="что такое SGU?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,137,0,0" FontFamily="Portable User Interface" toolkit:TiltEffect.IsTiltEnabled="True"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
