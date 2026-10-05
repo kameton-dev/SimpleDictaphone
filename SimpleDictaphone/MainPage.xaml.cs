@@ -22,12 +22,10 @@ namespace SimpleDictaphone
         {
             InitializeComponent();
             _audioManager = new AudioManager();
-
             _xnaTimer = new DispatcherTimer();
             _xnaTimer.Interval = TimeSpan.FromMilliseconds(50);
             _xnaTimer.Tick += (s, e) => FrameworkDispatcher.Update();
             _xnaTimer.Start();
-
             _recordTimer = new DispatcherTimer();
             _recordTimer.Interval = TimeSpan.FromSeconds(1);
             _recordTimer.Tick += RecordTimer_Tick;
@@ -36,6 +34,18 @@ namespace SimpleDictaphone
             _isRecording = false;
 
             LoadRecordings();
+        }
+
+        private void SetIdleDetection(bool enabled)
+        {
+            try
+            {
+                PhoneApplicationService.Current.ApplicationIdleDetectionMode =
+                    enabled ? IdleDetectionMode.Enabled : IdleDetectionMode.Disabled;
+            }
+            catch (InvalidOperationException)
+            {
+            }
         }
 
         private void LoadRecordings()
@@ -58,26 +68,21 @@ namespace SimpleDictaphone
         {
             if (!_isRecording)
             {
-                
-
+                SetIdleDetection(false);
                 string name = _audioManager.StartRecording();
                 _recordStartTime = DateTime.Now;
                 _recordTimer.Start();
                 BlinkingAnimation.Begin();
                 _isRecording = true;
-     
             }
             else
             {
-
-                
-
                 _audioManager.StopRecording();
                 _recordTimer.Stop();
                 BlinkingAnimation.Stop();
                 RecordDot.Opacity = 1.0;
                 _isRecording = false;
-
+                SetIdleDetection(true);
                 TimerText.Text = "00:00";
                 LoadRecordings();
             }
@@ -101,6 +106,17 @@ namespace SimpleDictaphone
         private void AboutAppMenuItem_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/AboutAppPage.xaml", UriKind.Relative));
+        }
+
+        protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            if (_isRecording)
+            {
+                _audioManager.StopRecording();
+                _isRecording = false;
+                SetIdleDetection(true);
+            }
         }
     }
 }
