@@ -12,7 +12,8 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"
+    toolkit:TiltEffect.IsTiltEnabled="True">
 
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="GroupHeaderTemplate">
@@ -101,8 +102,8 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="SIMPLEDICTAPHONE" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="все записи" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="ВСЕ ЗАПИСИ" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <!--<TextBlock Text="все записи" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>-->
         </StackPanel>
 
         <Grid Grid.Row="1" Margin="12,0,12,0">
@@ -126,7 +127,7 @@
         </Grid>
 
         <Grid Grid.Row="1" VerticalAlignment="Bottom" Background="{StaticResource PhoneChromeBrush}">
-            <StackPanel  Margin="0" VerticalAlignment="Bottom">
+            <StackPanel VerticalAlignment="Bottom">
                 <ProgressBar x:Name="ProgressBar" 
                              Height="6" 
                              Margin="12,12,12,8"
