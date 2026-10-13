@@ -155,6 +155,9 @@
   <data name="MainHeader" xml:space="preserve">
     <value>recorder</value>
   </data>
+  <data name="AboutHeader" xml:space="preserve">
+    <value>about app</value>
+  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
