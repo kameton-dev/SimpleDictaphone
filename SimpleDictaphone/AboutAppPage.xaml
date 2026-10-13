@@ -47,7 +47,7 @@
 
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="SIMPLEDICTAPHONE" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="о приложении" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="{Binding LocalizedResources.AboutHeader, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
@@ -55,16 +55,20 @@
                 <Image x:Name="image" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/Images/logo-simpledictaphone.png" Stretch="UniformToFill" Margin="12,10,0,0"/>
                 <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="SimpleDictaphone" VerticalAlignment="Top" Margin="12,10,0,0" Width="351" FontSize="32"/>
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="12,0,0,0" Width="351" FontSize="26.667" Opacity="0.5" FontFamily="Segoe WP SemiLight">
-                    Версия: 1.3.0.0
+                    v.1.3.0.0
                 </TextBlock>
                 <StackPanel VerticalAlignment="Bottom" Margin="0,25,0,0">
                     <Image x:Name="image1" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="80" Margin="12,0,0,0" Source="/Assets/Images/logo-simplesoftware.png"/>
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="12,5,0,0" FontSize="32" FontFamily="Segoe WP" Width="436" Foreground="{StaticResource PhoneAccentBrush}">
-                        ТГК: @SimpSoftware
+                        By kameton.dev
                     </TextBlock>
                 </StackPanel>
+                
             </StackPanel>
-            
+
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12,15,0,0">
+                <TextBlock Text="{Binding LocalizedResources.ResourceLanguage, Source={StaticResource LocalizedStrings}}" Foreground="#7FFFFFFF" FontSize="22"/>
+            </StackPanel>
         </Grid>
     </Grid>
 
