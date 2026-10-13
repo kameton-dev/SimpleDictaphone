@@ -29,7 +29,7 @@ namespace SimpleDictaphone
             _recordTimer = new DispatcherTimer();
             _recordTimer.Interval = TimeSpan.FromSeconds(1);
             _recordTimer.Tick += RecordTimer_Tick;
-
+            BuildApplicationBar();
             TimerText.Text = "00:00";
             _isRecording = false;
 
@@ -117,6 +117,22 @@ namespace SimpleDictaphone
                 _isRecording = false;
                 SetIdleDetection(true);
             }
+        }
+
+        private void BuildApplicationBar()
+        {
+            ApplicationBar = new ApplicationBar();
+
+            ApplicationBarMenuItem menuSettings = new ApplicationBarMenuItem();
+            menuSettings.Text = SimpleDictaphone.Resources.AppResources.AppBarAbout;
+            menuSettings.Click += AboutAppMenuItem_Click;
+            ApplicationBar.MenuItems.Add(menuSettings);
+
+            ApplicationBarIconButton buttonSearch = new ApplicationBarIconButton();
+            buttonSearch.IconUri = new Uri("/Assets/AppBar/list.png", UriKind.Relative);
+            buttonSearch.Text = SimpleDictaphone.Resources.AppResources.AppBarList;
+            buttonSearch.Click += OpenRecordingsButton_Click;
+            ApplicationBar.Buttons.Add(buttonSearch);
         }
     }
 }

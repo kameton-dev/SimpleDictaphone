@@ -80,7 +80,7 @@ namespace SimpleDictaphone
         {
             if (_recordingStream == null || _recordingStream.Length == 0)
             {
-                MessageBox.Show("Пустой буфер записи", "SimpleDictaphone", MessageBoxButton.OK);
+                MessageBox.Show(SimpleDictaphone.Resources.AppResources.EmptyBufferError, "(ᵕ⸝⸝• ᴗ •)", MessageBoxButton.OK);
                 return;
             }
 
@@ -109,7 +109,7 @@ namespace SimpleDictaphone
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка в try: " + ex.Message, "SimpleDictaphone", MessageBoxButton.OK);
+                    MessageBox.Show("Ошибка в try: " + ex.Message, "(๑-﹏-๑)", MessageBoxButton.OK);
                 }
                 finally
                 {
@@ -120,7 +120,7 @@ namespace SimpleDictaphone
             _recordingStream.Dispose();
             _recordingStream = null;
 
-            MessageBox.Show("Запись сохранена", "SimpleDictaphone", MessageBoxButton.OK);
+            MessageBox.Show("Запись сохранена", "(˶˃ ᵕ ˂˶)", MessageBoxButton.OK);
         }
 
         private void WriteWavHeaderRaw(Stream stream, int dataLength, short channels, int sampleRate)

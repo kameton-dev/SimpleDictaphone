@@ -63,38 +63,6 @@
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
 
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem IsEnabled="False" Text="переименовать" Click="RenameMenuItem_Click"/>
-                <shell:ApplicationBarMenuItem IsEnabled="False" Text="удалить запись" Click="DeleteMenuItem_Click"/>
-            </shell:ApplicationBar.MenuItems>
-
-            <shell:ApplicationBarIconButton x:Name="RewindButton" Click="RewindButton_Click" IconUri="/Assets/AppBar/transport.rew.png" IsEnabled="False" Text="в начало"/>
-
-            <shell:ApplicationBarIconButton x:Name="PlayButton"
-                                            IconUri="/Assets/AppBar/transport.play.png"
-                                            Text="играть"
-                                            Click="PlayButton_Click"
-                                            IsEnabled="False" />
-            
-
-            <shell:ApplicationBarIconButton x:Name="PauseButton"
-                                IconUri="/Assets/AppBar/transport.pause.png"
-                                Text="пауза"
-                                Click="PauseButton_Click"
-                                IsEnabled="False" />
-            <shell:ApplicationBarIconButton x:Name="SaveButton"
-                                            IconUri="/Assets/AppBar/download.png"
-                                            Text="сохранить"
-                                            Click="SaveButton_Click"
-                                            IsEnabled="False" />
-            
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
-    
-    
-
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -102,13 +70,11 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="ВСЕ ЗАПИСИ" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding LocalizedResources.ListHeader, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
             <!--<TextBlock Text="все записи" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>-->
         </StackPanel>
 
         <Grid Grid.Row="1" Margin="12,0,12,0">
-
-
             <phone:LongListSelector x:Name="RecordingsSelector" 
                         IsGroupingEnabled="True" 
                         HideEmptyGroups="True"

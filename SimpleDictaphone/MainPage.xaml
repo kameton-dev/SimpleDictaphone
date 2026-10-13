@@ -48,15 +48,6 @@
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
 
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="о приложении" Click="AboutAppMenuItem_Click"/>
-            </shell:ApplicationBar.MenuItems>
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/list.png" Click="OpenRecordingsButton_Click" IsEnabled="True" Text="все записи"/>
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
-
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -65,20 +56,16 @@
 
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="SIMPLEDICTAPHONE" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="диктофон" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="{Binding LocalizedResources.MainHeader, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="456" Height="535">
-
                 <TextBlock x:Name="TimerText"
                    Text="00:00"
                    FontSize="48"
                    HorizontalAlignment="Center"
                    Margin="10,20" Width="114" />
-
-                
-
                 <Button x:Name="RecordToggleButton"
         toolkit:TiltEffect.IsTiltEnabled="True"
         Width="200" Height="199.8"
