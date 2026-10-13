@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-    Microsoft ResX Schema
-
+  <!-- 
+    Microsoft ResX Schema 
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -122,16 +122,97 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>ru-RU</value>
+    <value>en-US</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
-  <data name="ApplicationTitle" xml:space="preserve">
-    <value>МОЕ ПРИЛОЖЕНИЕ</value>
+  <data name="AppBarAbout" xml:space="preserve">
+    <value>about app</value>
   </data>
-  <data name="AppBarButtonText" xml:space="preserve">
-    <value>добавить</value>
+  <data name="AppBarDelete" xml:space="preserve">
+    <value>delete</value>
   </data>
-  <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Пункт меню</value>
+  <data name="AppBarList" xml:space="preserve">
+    <value>all recordings</value>
+  </data>
+  <data name="AppBarPause" xml:space="preserve">
+    <value>pause</value>
+  </data>
+  <data name="AppBarPlay" xml:space="preserve">
+    <value>play</value>
+  </data>
+  <data name="AppBarRename" xml:space="preserve">
+    <value>rename</value>
+  </data>
+  <data name="AppBarRewind" xml:space="preserve">
+    <value>rewind</value>
+  </data>
+  <data name="AppBarSave" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="ListHeader" xml:space="preserve">
+    <value>ALL RECORDINGS</value>
+  </data>
+  <data name="MainHeader" xml:space="preserve">
+    <value>recorder</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ButtonOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="EmptyBufferError" xml:space="preserve">
+    <value>Empty write buffer</value>
+  </data>
+  <data name="RecordingDeleteConfirm" xml:space="preserve">
+    <value>Delete recording?</value>
+  </data>
+  <data name="RecordingDeleteError" xml:space="preserve">
+    <value>Delete error: {0}</value>
+  </data>
+  <data name="RecordingDeleteTitle" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="RecordingFileNotFound" xml:space="preserve">
+    <value>File not found</value>
+  </data>
+  <data name="RecordingNameEmpty" xml:space="preserve">
+    <value>The name cannot be empty</value>
+  </data>
+  <data name="RecordingNameInvalid" xml:space="preserve">
+    <value>The name contains invalid characters</value>
+  </data>
+  <data name="RecordingPlaybackError" xml:space="preserve">
+    <value>Playback error: {0}</value>
+  </data>
+  <data name="RecordingRenamed" xml:space="preserve">
+    <value>Recording renamed</value>
+  </data>
+  <data name="RecordingRenameError" xml:space="preserve">
+    <value>Rename error: {0}</value>
+  </data>
+  <data name="RecordingRenameTitle" xml:space="preserve">
+    <value>Rename recording</value>
+  </data>
+  <data name="RecordingRenameWarning" xml:space="preserve">
+    <value>Do NOT include numbers in the title!</value>
+  </data>
+  <data name="RecordingSaved" xml:space="preserve">
+    <value>Recorging saved to Music/SimpleDictaphone</value>
+  </data>
+  <data name="RecordingSaveError" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="RecordingsDateToday" xml:space="preserve">
+    <value>today</value>
+  </data>
+  <data name="RecordingsDateYesterday" xml:space="preserve">
+    <value>yesterday</value>
+  </data>
+  <data name="RecordingSelectFirst" xml:space="preserve">
+    <value>Choose recording first</value>
+  </data>
+  <data name="RecordingUnknownError" xml:space="preserve">
+    <value>unknown error</value>
   </data>
 </root>
