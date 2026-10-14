@@ -120,7 +120,7 @@ namespace SimpleDictaphone
             _recordingStream.Dispose();
             _recordingStream = null;
 
-            MessageBox.Show("Запись сохранена", "(˶˃ ᵕ ˂˶)", MessageBoxButton.OK);
+            //MessageBox.Show("Запись сохранена", "(˶˃ ᵕ ˂˶)", MessageBoxButton.OK);
         }
 
         private void WriteWavHeaderRaw(Stream stream, int dataLength, short channels, int sampleRate)
